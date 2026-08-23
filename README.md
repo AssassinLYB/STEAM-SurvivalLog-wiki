@@ -12,10 +12,6 @@
 - **实用工具**：列表排序筛选、食材标签过滤、⭐收藏与属性对比表、深浅双主题、字体大小调节
 - **全端适配**：电脑和手机浏览器打开自动切换布局（手机端侧栏变为抽屉式，无需安装任何 App）
 
-## 在线访问
-
-- 在线版（电脑/手机自动适配）：https://assassinlyb.github.io/STEAM-SurvivalLog-wiki/
-
 ## 数据来源与声明
 
 数据提取自游戏配置表（游戏版本 1.0.14911），页面不包含任何游戏美术资源。非官方资料站，仅供参考；数据如与游戏内不符，以游戏为准。
@@ -33,10 +29,6 @@ A single self-contained HTML file with zero dependencies, works fully offline. *
 - **Search**: pinyin & initials supported (e.g. type `ftq` to find 佛跳墙, "Buddha Jumps Over the Wall")
 - **Utilities**: list sorting & filtering, ingredient-tag filters, ⭐ favorites with a stat-comparison table, light/dark themes, adjustable font size
 - **Responsive**: the layout switches automatically between desktop and mobile browsers (drawer sidebar on phones, no app required)
-
-## Online
-
-- Online version (auto-adapts to desktop & mobile): https://assassinlyb.github.io/STEAM-SurvivalLog-wiki/
 
 ## Data Source & Disclaimer
 
