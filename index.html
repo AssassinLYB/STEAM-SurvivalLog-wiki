@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="zh"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Survival Log 物品百科</title>
 <style>
   * { box-sizing: border-box; }
@@ -138,7 +139,28 @@
   .fncard { border:1px solid var(--border); border-radius:10px; padding:10px 12px; }
   .fncard b { font-size:0.88rem; }
   .fncard .sub { color:var(--muted); font-size:0.75rem; margin-top:4px; line-height:1.5; }
+  #scrim { display:none; }
+  /* —— 移动端适配（≤860px）：侧栏变抽屉 + 紧凑布局 —— */
+  @media (max-width:860px){
+    #side { position:fixed; left:0; top:0; bottom:26px; width:280px; transform:translateX(-105%); transition:transform .2s ease; z-index:60; box-shadow:var(--shadow); display:block; }
+    body.side-open #side { transform:translateX(0); }
+    body.side-off #side { display:block; }   /* 抽屉开关接管，桌面收起状态不生效 */
+    body.side-open #scrim { display:block; position:fixed; top:0; left:0; right:0; bottom:26px; background:rgba(0,0,0,.42); z-index:55; }
+    #topbar { padding:8px 10px; gap:8px; }
+    #content { padding:12px 12px 30px; }
+    .card { padding:10px 12px; }
+    .page-h { font-size:1.15rem; }
+    table.cmp, table.kv { display:block; overflow-x:auto; max-width:100%; -webkit-overflow-scrolling:touch; }
+    .kv td.k { min-width:96px; }
+    .list-row { flex-wrap:wrap; }
+    .list-row .meta { max-width:100%; }
+    .statrow .lb { min-width:88px; }
+    .home-stats { grid-template-columns:repeat(2,1fr); }
+    .cat-grid { grid-template-columns:repeat(auto-fill,minmax(120px,1fr)); }
+    .fngrid { grid-template-columns:1fr; }
+  }
 </style></head><body>
+<div id="scrim"></div>
 <div id="side">
   <div id="shead">
     <div class="logo">🏕️ Survival Log 百科<small>物品 · 配方 · 家具 · Buff · 天赋</small><small class="wmlink"><a href="https://space.bilibili.com/33888112" target="_blank" rel="noopener">📺 作者主页 space.bilibili.com/33888112</a></small></div>
@@ -257,8 +279,11 @@ function setSide(off){
   sideOff = off; applySide();
   try { localStorage.setItem("sl-side", off ? "0" : "1"); } catch(e){}
 }
-el("sidebtn").addEventListener("click", () => setSide(!sideOff));
-el("sideclose").addEventListener("click", () => setSide(true));
+function isNarrow(){ return matchMedia("(max-width:860px)").matches; }
+function drawer(open){ document.body.classList.toggle("side-open", open); }
+el("sidebtn").addEventListener("click", () => { isNarrow() ? drawer(!document.body.classList.contains("side-open")) : setSide(!sideOff); });
+el("sideclose").addEventListener("click", () => { isNarrow() ? drawer(false) : setSide(true); });
+el("scrim").addEventListener("click", () => drawer(false));
 applySide();
 // —— 一键收起/展开所有分区与分支 ——
 function setAllNav(open){
@@ -995,6 +1020,7 @@ document.addEventListener("click", e => {
 });
 // —— 路由 ——
 function route(){
+  if (isNarrow()) drawer(false);   // 手机抽屉内导航后自动收起
   const h = decodeURIComponent(location.hash.replace(/^#/, "")) || "/home";
   const [path, qs] = h.split("?");
   const parts = path.split("/").filter(Boolean);
