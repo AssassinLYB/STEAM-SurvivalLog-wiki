@@ -1,6 +1,6 @@
 # 🏕️生存日志  Survival Log 物品百科（玩家自制资料站）
 
-《Survival Log》（Steam）的玩家资料页，**单个 HTML 文件、零依赖、无需联网**——下载 `index.html` 双击即可使用。
+单个 HTML 文件、零依赖、无需联网——**下载 `index.html` 双击即可使用。**
 
 ## 功能
 
@@ -13,8 +13,7 @@
 
 ## 在线访问
 
-- GitHub Pages：（部署后填写）
-- Cloudflare Pages：（部署后填写）
+- GitHub Pages：https://github.com/AssassinLYB/STEAM-SurvivalLog-wiki
 
 ## 数据来源与声明
 
@@ -22,7 +21,7 @@
 
 # 🏕️ Survival Log Wiki (Player-Made Game Database)
 
-A fan-made reference site for *Survival Log* (Steam) — a **single self-contained HTML file with zero dependencies, works fully offline**. Just download `index.html` and open it in any browser.
+A single self-contained HTML file with zero dependencies, works fully offline. **Just download `index.html` and open it in any browser.**
 
 ## Features
 
@@ -35,10 +34,8 @@ A fan-made reference site for *Survival Log* (Steam) — a **single self-contain
 
 ## Online
 
-- GitHub Pages: (fill in after deployment)
-- Cloudflare Pages: (fill in after deployment)
+- GitHub Pages：https://github.com/AssassinLYB/STEAM-SurvivalLog-wiki
 
 ## Data Source & Disclaimer
 
 All data is extracted from the game's config tables (game version 1.0.14754). This page contains no game art assets. This is an unofficial fan project for reference only — when data differs from the game, the game is always right.
-
