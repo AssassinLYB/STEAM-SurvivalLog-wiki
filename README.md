@@ -12,9 +12,10 @@
 - **实用工具**：列表排序筛选、食材标签过滤、⭐收藏与属性对比表、深浅双主题、字体大小调节
 - **全端适配**：电脑和手机浏览器打开自动切换布局（手机端侧栏变为抽屉式，无需安装任何 App）
 
-## 在线访问
+## 地址
 
-- 在线版（电脑/手机自动适配）：https://assassinlyb.github.io/STEAM-SurvivalLog-wiki/
+- GitHub Pages：https://github.com/AssassinLYB/STEAM-SurvivalLog-wiki
+- bilibili：https://www.bilibili.com/video/BV1Gz8t6LEyP/
 
 ## 数据来源与声明
 
@@ -23,6 +24,9 @@
 # 🏕️ Survival Log Wiki (Player-Made Game Database)
 
 A single self-contained HTML file with zero dependencies, works fully offline. **Just download `生存日志图鉴.html` and open it in any browser.**
+
+- GitHub Pages：https://github.com/AssassinLYB/STEAM-SurvivalLog-wiki
+- bilibili：https://www.bilibili.com/video/BV1Gz8t6LEyP/
 
 ## Features
 
@@ -33,10 +37,6 @@ A single self-contained HTML file with zero dependencies, works fully offline. *
 - **Search**: pinyin & initials supported (e.g. type `ftq` to find 佛跳墙, "Buddha Jumps Over the Wall")
 - **Utilities**: list sorting & filtering, ingredient-tag filters, ⭐ favorites with a stat-comparison table, light/dark themes, adjustable font size
 - **Responsive**: the layout switches automatically between desktop and mobile browsers (drawer sidebar on phones, no app required)
-
-## Online
-
-- Online version (auto-adapts to desktop & mobile): https://assassinlyb.github.io/STEAM-SurvivalLog-wiki/
 
 ## Data Source & Disclaimer
 
