@@ -11,10 +11,15 @@
 - **搜索**：支持拼音与首字母（如输入 `ftq` 搜"佛跳墙"）
 - **实用工具**：列表排序筛选、食材标签过滤、⭐收藏与属性对比表、深浅双主题、字体大小调节
 - **配方进度记录（v1.1.0）**：手动标记已解锁的配方——配方列表/详情页/物品列表行 🔒 均可一键标记；「✅ 已解锁」页按原本分类分组查看（烹饪按菜品子类、制作按产物类别），支持一键清空（带确认）
+- **物品解锁进度（v1.3.0）**：任意物品（食材/即食食物/菜品/材料…）都能标记"已解锁"——列表行 🔒/🔓 一键切换、详情页可标记，分类列表支持"已解锁在前"排序，「✅ 已解锁」页汇总查看（与配方标记相互独立）
 - **全端适配**：电脑和手机浏览器打开自动切换布局（手机端侧栏变为抽屉式，无需安装任何 App）
 
 ## 版本记录
 
+- **v1.3.0**（2026-08-25）
+  - 物品级解锁标记：所有物品（不只菜品）都能标记"已解锁"——食材、即食食物、材料等列表行都带 🔒/🔓，物品详情页也可标记
+  - 分类列表新增"解锁状态"排序：可按 已解锁在前 / 未解锁在前 排列
+  - 「✅ 已解锁」页新增"已解锁物品"分组（按原分类），一键清空同时清掉配方与物品
 - **v1.2.0**（2026-08-24）
   - 配方列表分区：专属菜谱（指定食材）排在前面，通用菜谱（食材组合/自由组合）排在后面，两组各有小节标题
   - 修正食材类别标签：物品详情"作为食材"的组合菜谱、食物列表"按食材类别过滤"现在按真正的食材类别（肉/蔬菜/菌菇/主食…）匹配
@@ -49,10 +54,15 @@ A single self-contained HTML file with zero dependencies, works fully offline. *
 - **Search**: pinyin & initials supported (e.g. type `ftq` to find 佛跳墙, "Buddha Jumps Over the Wall")
 - **Utilities**: list sorting & filtering, ingredient-tag filters, ⭐ favorites with a stat-comparison table, light/dark themes, adjustable font size
 - **Recipe progress tracker (v1.1.0)**: mark recipes as unlocked — from recipe lists, detail pages, or the 🔒 button right on item rows; browse them grouped by original category on the "✅ Unlocked" page (cooking by dish sub-type, crafting by product category); clear all with a confirmation
+- **Item unlock progress (v1.3.0)**: mark any item (ingredients / ready-to-eat food / dishes / materials, …) as "unlocked" — one-click 🔒/🔓 on list rows and the detail page, "unlocked-first" sorting in category lists, and a summary on the "✅ Unlocked" page (independent from recipe marks)
 - **Responsive**: the layout switches automatically between desktop and mobile browsers (drawer sidebar on phones, no app required)
 
 ## Changelog
 
+- **v1.3.0** (2026-08-25)
+  - Item-level unlock flag: every item (not just dishes) can now be marked "unlocked" — raw ingredients, ready-to-eat food, materials, etc. all show a 🔒/🔓 toggle on list rows, and the item detail page has one too
+  - Category lists: new "unlock status" sort — order by unlocked-first / locked-first
+  - "✅ Unlocked" page: new "unlocked items" section (grouped by category); clear-all now clears both recipes and items
 - **v1.2.0** (2026-08-24)
   - Recipe list sections: specific recipes (fixed ingredients) come first, generic recipes (ingredient combinations / free combination) after, each with its own heading
   - Fixed ingredient-category tags: the item detail "used in recipes" combo list and the food-list category filter now match by the real ingredient category (meat / vegetable / mushroom / staple, …), so the related generic recipes are correct
