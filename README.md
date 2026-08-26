@@ -14,10 +14,20 @@
 - **物品解锁进度（v1.3.0）**：任意物品（食材/即食食物/菜品/材料…）都能标记"已解锁"——列表行 🔒/🔓 一键切换、详情页可标记，分类列表支持"已解锁在前"排序，「✅ 已解锁」页汇总查看（与配方标记相互独立）
 - **家具功能数值（v1.4.0）**：家具详情页直接看到功能按钮的真实数值——床的睡觉回复效率（铁床 ×1.1、实木床 ×1.25）、睡觉/打盹/睡美容觉的精力回复（每 30 分钟 + 全程估算）、跑步/发电的消耗与获得
 - **配方分区与专用设备警示（v1.4.1）**：物品详情页"用于配方"按 专属/通用 分区；果汁、奶昔、咖啡类菜谱标注"⚠️ 仅榨汁机/咖啡机"，避免放错灶台做不出菜
+- **配方计算器「我能做什么饭」（v1.5.0）**：勾选你已有的食材，自动列出所有能做的菜谱——专属菜谱需全部材料齐全，通用菜谱需每个类别至少一种；支持全选/清空，结果按专属/通用分区展示
+- **搜索增强（v1.5.0）**：搜索历史（最多10条，搜索框为空时自动显示，可单条删除）+ 最近浏览（最多20条，首页展示，访问物品/配方/家具/Buff/天赋详情页自动记录，可单条删除或清空）
+- **配方筛选增强（v1.5.0）**：烹饪配方列表新增「食材类别」下拉筛选（12个类别：肉/蔬菜/菌菇/主食/水果/鱼类/蛋奶/调味品/软饮料/酒/零食/其他），与等级/设施/解锁筛选并列
+- **存档导入（v1.5.1）**：「✅ 已解锁」页新增「📂 导入存档」按钮——选择游戏存档文件，自动识别并标记已解锁配方（模式匹配动态定位，不依赖固定偏移，游戏更新后仍可用）；仅在本地浏览器解析，不上传
 - **全端适配**：电脑和手机浏览器打开自动切换布局（手机端侧栏变为抽屉式，无需安装任何 App）
 
 ## 版本记录
 
+- **v1.5.3**（2026-08-26）
+  - 配方计算器「我能做什么饭」：勾选已有食材自动列出能做的菜谱（专属需全材料、通用需每类至少一种），支持全选/清空，结果按专属/通用分区
+  - 搜索增强：搜索历史（最多10条，搜索框为空时显示，可单条删除）+ 最近浏览（最多20条，首页展示，访问详情页自动记录）
+  - 配方筛选增强：烹饪配方列表新增「食材类别」下拉筛选（12个类别），与等级/设施/解锁筛选并列
+  - 存档导入：「✅ 已解锁」页新增导入按钮，选择存档文件自动识别并标记已解锁配方（模式匹配动态定位，游戏更新后仍可用），仅本地解析不上传
+  - 侧栏调整：「我能做什么饭」移到「✅ 已解锁」下面紧挨着；首页新增新功能提示行（可点击跳转）
 - **v1.4.1**（2026-08-26）
   - 物品详情页"用于配方"分区：专属菜谱（指定食材）排在前面，通用菜谱（食材组合）排在后面，与配方列表页一致
   - 专用设备警示：14 道果汁/奶昔/咖啡菜谱（西瓜汁、拿铁咖啡等）卡片与详情页标注"⚠️ 仅榨汁机/咖啡机可做"——放入燃气灶等普通灶台无法烹饪，只会得到黑暗料理
@@ -66,10 +76,20 @@ A single self-contained HTML file with zero dependencies, works fully offline. *
 - **Item unlock progress (v1.3.0)**: mark any item (ingredients / ready-to-eat food / dishes / materials, …) as "unlocked" — one-click 🔒/🔓 on list rows and the detail page, "unlocked-first" sorting in category lists, and a summary on the "✅ Unlocked" page (independent from recipe marks)
 - **Furniture function values (v1.4.0)**: bed detail pages show sleep-recovery efficiency (iron bed ×1.1, solid-wood bed ×1.25) and real numbers for sleep / nap / beauty-sleep / running / power buttons — duration, stamina gained per 30 minutes, full-duration estimate, costs and gains
 - **Recipe sections & appliance warnings (v1.4.1)**: the item detail "used in recipes" list is now split into specific / generic sections; juice, milkshake and coffee recipes show a "⚠️ juicer/coffee maker only" warning so you don't put them on the wrong stove
+- **Recipe calculator "What can I cook?" (v1.5.0)**: check the ingredients you have and it automatically lists every recipe you can make — specific recipes need all ingredients, generic recipes need at least one per category; select all / clear all, results split by specific / generic
+- **Search enhancements (v1.5.0)**: search history (up to 10, shown when the search box is empty, deletable one by one) + recently viewed (up to 20, shown on the home page, auto-recorded when you visit any item/recipe/furniture/buff/talent detail page)
+- **Recipe filter enhancement (v1.5.0)**: cooking recipe list gets a new "ingredient category" dropdown filter (12 categories: meat / vegetable / mushroom / staple / fruit / fish / egg-dairy / seasoning / soft drink / alcohol / snack / other), alongside level / facility / unlock filters
+- **Save file import (v1.5.1)**: the "✅ Unlocked" page gets an import button — select your game save file and it automatically detects and marks unlocked recipes (pattern-matching dynamic lookup, works across game updates); parsed locally only, never uploaded
 - **Responsive**: the layout switches automatically between desktop and mobile browsers (drawer sidebar on phones, no app required)
 
 ## Changelog
 
+- **v1.5.3** (2026-08-26)
+  - Recipe calculator "What can I cook?": check the ingredients you have and it lists every recipe you can make (specific needs all ingredients, generic needs at least one per category); select all / clear all, results split by specific / generic
+  - Search enhancements: search history (up to 10, shown when empty, deletable one by one) + recently viewed (up to 20, on the home page, auto-recorded on detail page visits)
+  - Recipe filter enhancement: new "ingredient category" dropdown (12 categories) alongside level / facility / unlock filters
+  - Save file import: "✅ Unlocked" page gets an import button — select a save file to auto-detect and mark unlocked recipes (pattern-matching dynamic lookup, works across updates); parsed locally only
+  - Sidebar tweak: "What can I cook?" moved right below "✅ Unlocked"; home page gets a new-feature highlight row (clickable links)
 - **v1.4.1** (2026-08-26)
   - Item detail "used in recipes" sections: specific recipes (fixed ingredients) come first, generic recipes (ingredient combinations) after — consistent with the recipe list page
   - Appliance warnings: the 14 juice / milkshake / coffee recipes (watermelon juice, latte, …) are marked "⚠️ juicer/coffee maker only" on cards and detail pages — on a normal stove (gas stove, fuel stove, …) they cannot be cooked and only produce the dark dish
