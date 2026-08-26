@@ -12,10 +12,19 @@
 - **实用工具**：列表排序筛选、食材标签过滤、⭐收藏与属性对比表、深浅双主题、字体大小调节
 - **配方进度记录（v1.1.0）**：手动标记已解锁的配方——配方列表/详情页/物品列表行 🔒 均可一键标记；「✅ 已解锁」页按原本分类分组查看（烹饪按菜品子类、制作按产物类别），支持一键清空（带确认）
 - **物品解锁进度（v1.3.0）**：任意物品（食材/即食食物/菜品/材料…）都能标记"已解锁"——列表行 🔒/🔓 一键切换、详情页可标记，分类列表支持"已解锁在前"排序，「✅ 已解锁」页汇总查看（与配方标记相互独立）
+- **家具功能数值（v1.4.0）**：家具详情页直接看到功能按钮的真实数值——床的睡觉回复效率（铁床 ×1.1、实木床 ×1.25）、睡觉/打盹/睡美容觉的精力回复（每 30 分钟 + 全程估算）、跑步/发电的消耗与获得
+- **配方分区与专用设备警示（v1.4.1）**：物品详情页"用于配方"按 专属/通用 分区；果汁、奶昔、咖啡类菜谱标注"⚠️ 仅榨汁机/咖啡机"，避免放错灶台做不出菜
 - **全端适配**：电脑和手机浏览器打开自动切换布局（手机端侧栏变为抽屉式，无需安装任何 App）
 
 ## 版本记录
 
+- **v1.4.1**（2026-08-26）
+  - 物品详情页"用于配方"分区：专属菜谱（指定食材）排在前面，通用菜谱（食材组合）排在后面，与配方列表页一致
+  - 专用设备警示：14 道果汁/奶昔/咖啡菜谱（西瓜汁、拿铁咖啡等）卡片与详情页标注"⚠️ 仅榨汁机/咖啡机可做"——放入燃气灶等普通灶台无法烹饪，只会得到黑暗料理
+  - 措辞修正：物品的"可加热"标签改为"可烹饪"（含义为可作为食材放入灶台烹饪）
+- **v1.4.0**（2026-08-25）
+  - 床的睡觉回复效率：床详情页新增回复效率系数（单人铁床 ×1.1、实木床 ×1.25，其余默认 ×1.0）
+  - 功能按钮真实数值：睡觉/打盹/睡美容觉/跑步/手动发电等原本只显示文案的功能，现在展示时长、每 30 分钟回复量、全程估算、消耗与获得（数据来自游戏动作/效果配置表）
 - **v1.3.0**（2026-08-25）
   - 物品级解锁标记：所有物品（不只菜品）都能标记"已解锁"——食材、即食食物、材料等列表行都带 🔒/🔓，物品详情页也可标记
   - 分类列表新增"解锁状态"排序：可按 已解锁在前 / 未解锁在前 排列
@@ -55,10 +64,19 @@ A single self-contained HTML file with zero dependencies, works fully offline. *
 - **Utilities**: list sorting & filtering, ingredient-tag filters, ⭐ favorites with a stat-comparison table, light/dark themes, adjustable font size
 - **Recipe progress tracker (v1.1.0)**: mark recipes as unlocked — from recipe lists, detail pages, or the 🔒 button right on item rows; browse them grouped by original category on the "✅ Unlocked" page (cooking by dish sub-type, crafting by product category); clear all with a confirmation
 - **Item unlock progress (v1.3.0)**: mark any item (ingredients / ready-to-eat food / dishes / materials, …) as "unlocked" — one-click 🔒/🔓 on list rows and the detail page, "unlocked-first" sorting in category lists, and a summary on the "✅ Unlocked" page (independent from recipe marks)
+- **Furniture function values (v1.4.0)**: bed detail pages show sleep-recovery efficiency (iron bed ×1.1, solid-wood bed ×1.25) and real numbers for sleep / nap / beauty-sleep / running / power buttons — duration, stamina gained per 30 minutes, full-duration estimate, costs and gains
+- **Recipe sections & appliance warnings (v1.4.1)**: the item detail "used in recipes" list is now split into specific / generic sections; juice, milkshake and coffee recipes show a "⚠️ juicer/coffee maker only" warning so you don't put them on the wrong stove
 - **Responsive**: the layout switches automatically between desktop and mobile browsers (drawer sidebar on phones, no app required)
 
 ## Changelog
 
+- **v1.4.1** (2026-08-26)
+  - Item detail "used in recipes" sections: specific recipes (fixed ingredients) come first, generic recipes (ingredient combinations) after — consistent with the recipe list page
+  - Appliance warnings: the 14 juice / milkshake / coffee recipes (watermelon juice, latte, …) are marked "⚠️ juicer/coffee maker only" on cards and detail pages — on a normal stove (gas stove, fuel stove, …) they cannot be cooked and only produce the dark dish
+  - Wording fix: the item badge "可加热" (reheatable) is now "可烹饪" (cookable — can be placed in a stove as an ingredient)
+- **v1.4.0** (2026-08-25)
+  - Bed sleep-recovery efficiency: bed detail pages now show the recovery coefficient (iron bed ×1.1, solid-wood bed ×1.25, others default ×1.0)
+  - Real numbers for furniture functions: sleep / nap / beauty-sleep / running / power buttons that previously showed only text now display duration, stamina gained per 30 minutes, a full-duration estimate, and costs & gains (decoded from the game's action/effect config tables)
 - **v1.3.0** (2026-08-25)
   - Item-level unlock flag: every item (not just dishes) can now be marked "unlocked" — raw ingredients, ready-to-eat food, materials, etc. all show a 🔒/🔓 toggle on list rows, and the item detail page has one too
   - Category lists: new "unlock status" sort — order by unlocked-first / locked-first
