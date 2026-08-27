@@ -18,10 +18,14 @@
 - **搜索增强（v1.5.0）**：搜索历史（最多10条，搜索框为空时自动显示，可单条删除）+ 最近浏览（最多20条，首页展示，访问物品/配方/家具/Buff/天赋详情页自动记录，可单条删除或清空）
 - **配方筛选增强（v1.5.0）**：烹饪配方列表新增「食材类别」下拉筛选（12个类别：肉/蔬菜/菌菇/主食/水果/鱼类/蛋奶/调味品/软饮料/酒/零食/其他），与等级/设施/解锁筛选并列
 - **存档导入（v1.5.1）**：「✅ 已解锁」页新增「📂 导入存档」按钮——选择游戏存档文件，自动识别并标记已解锁配方（模式匹配动态定位，不依赖固定偏移，游戏更新后仍可用）；仅在本地浏览器解析，不上传
+- **家具交互时间（v1.5.4）**：家具详情页「🔘 交互功能」每个按钮显示 ⏱️ 交互时间（睡觉6小时、跑步1小时、手动发电10分钟等，数据来自动作配置表）；原效果文本中的时长已移除，时间与数值分离显示更清晰
 - **全端适配**：电脑和手机浏览器打开自动切换布局（手机端侧栏变为抽屉式，无需安装任何 App）
 
 ## 版本记录
 
+- **v1.5.4**（2026-08-27）
+  - 家具交互时间：详情页「🔘 交互功能」每个按钮新增 ⏱️ 交互时间显示（数据来自动作配置表 During 字段，885 个家具带时长），智能格式化显示天/小时/分钟
+  - 效果文本优化：原 fx 效果文本中混着的时长已移除，交互时间与效果数值分离显示，避免重复
 - **v1.5.3**（2026-08-26）
   - 配方计算器「我能做什么饭」：勾选已有食材自动列出能做的菜谱（专属需全材料、通用需每类至少一种），支持全选/清空，结果按专属/通用分区
   - 搜索增强：搜索历史（最多10条，搜索框为空时显示，可单条删除）+ 最近浏览（最多20条，首页展示，访问详情页自动记录）
@@ -80,10 +84,14 @@ A single self-contained HTML file with zero dependencies, works fully offline. *
 - **Search enhancements (v1.5.0)**: search history (up to 10, shown when the search box is empty, deletable one by one) + recently viewed (up to 20, shown on the home page, auto-recorded when you visit any item/recipe/furniture/buff/talent detail page)
 - **Recipe filter enhancement (v1.5.0)**: cooking recipe list gets a new "ingredient category" dropdown filter (12 categories: meat / vegetable / mushroom / staple / fruit / fish / egg-dairy / seasoning / soft drink / alcohol / snack / other), alongside level / facility / unlock filters
 - **Save file import (v1.5.1)**: the "✅ Unlocked" page gets an import button — select your game save file and it automatically detects and marks unlocked recipes (pattern-matching dynamic lookup, works across game updates); parsed locally only, never uploaded
+- **Furniture interaction duration (v1.5.4)**: each button in the furniture detail "🔘 Interaction" card now shows ⏱️ interaction time (sleep 6h, run 1h, manual power 10min, etc. — from the action config's During field, 885 furniture items have duration data); duration removed from effect text so time and stats are shown separately without duplication
 - **Responsive**: the layout switches automatically between desktop and mobile browsers (drawer sidebar on phones, no app required)
 
 ## Changelog
 
+- **v1.5.4** (2026-08-27)
+  - Furniture interaction duration: each button in the furniture detail "🔘 Interaction" card now shows ⏱️ interaction time (from the action config's During field, 885 furniture items have duration data), auto-formatted as days/hours/minutes
+  - Effect text cleanup: duration removed from the fx effect text so interaction time and effect stats are shown separately without duplication
 - **v1.5.3** (2026-08-26)
   - Recipe calculator "What can I cook?": check the ingredients you have and it lists every recipe you can make (specific needs all ingredients, generic needs at least one per category); select all / clear all, results split by specific / generic
   - Search enhancements: search history (up to 10, shown when empty, deletable one by one) + recently viewed (up to 20, on the home page, auto-recorded on detail page visits)
