@@ -4,7 +4,7 @@
 
 ## 功能
 
-- **物品图鉴**：2872 种物品按分类浏览，五维属性（饱食/心态/精力/健康/生命）、品质对比（完美/优良/普通/失败）、保鲜与变质链
+- **物品图鉴**：2877 种物品按分类浏览，五维属性（饱食/心态/精力/健康/生命）、品质对比（完美/优良/普通/失败）、保鲜与变质链
 - **配方图鉴**：496 道烹饪配方（含标签组合菜谱）+ 148 条制作配方，设施/等级反查
 - **家具图鉴**：1249 件家具（功能按钮、电气参数、对应包裹物品互链）
 - **Buff / 天赋图鉴**：758 条 Buff（含过期惩罚反查）、454 个天赋逐级效果
@@ -19,10 +19,22 @@
 - **配方筛选增强（v1.5.0）**：烹饪配方列表新增「食材类别」下拉筛选（12个类别：肉/蔬菜/菌菇/主食/水果/鱼类/蛋奶/调味品/软饮料/酒/零食/其他），与等级/设施/解锁筛选并列
 - **存档导入（v1.5.1）**：「✅ 已解锁」页新增「📂 导入存档」按钮——选择游戏存档文件，自动识别并标记已解锁配方（模式匹配动态定位，不依赖固定偏移，游戏更新后仍可用）；仅在本地浏览器解析，不上传
 - **家具交互时间（v1.5.4）**：家具详情页「🔘 交互功能」每个按钮显示 ⏱️ 交互时间（睡觉6小时、跑步1小时、手动发电10分钟等，数据来自动作配置表）；原效果文本中的时长已移除，时间与数值分离显示更清晰
+- **专属天赋与触发时间（v1.6.1）**：天赋图鉴区分「⭐ 专属天赋」——每个角色独有的天赋（打工仔/大学生/仓库管理员各有专属系，退伍军人无），列表与详情标"👤 XX 专属"徽章，侧栏有专属入口；并按天赋描述自动标注触发时间（🌞白天/🌙夜间/⚠️危机阶段/🌅度过危机后/🌆灾难前/⚡停电时/🗺️探索时/🤒生病时）
+- **只看未解锁（v1.6.1）**：物品分类列表与天赋图鉴新增「只看未解锁」勾选框——排除已标记解锁的，只显示还没解锁的条目；天赋同样可独立标记解锁（与「✅ 已解锁」页联动）
+- **图纸解锁标记（v1.6.1）**：54 个配方（48 制作 + 6 烹饪）需先获得对应"图纸"（36 个解锁天赋）才能制作——配方卡片/详情页标「🔒 需图纸（XX天赋）」金徽章，物品详情自动反查提示，避免等级够了却做不出
+- **物品格子大小（v1.5.5）**：全部物品显示背包占用格（宽×高），详情页「占用格子」升级为可视化格子图（大尺寸自动缩小），列表 meta 新增"📦 宽×高"
 - **全端适配**：电脑和手机浏览器打开自动切换布局（手机端侧栏变为抽屉式，无需安装任何 App）
 
 ## 版本记录
 
+- **v1.6.1**（2026-09-03）
+  - 数据更新：游戏版本 1.0.14911 → 1.0.15511，物品 2872 → 2877（新增 5 道菜：老菇杂炖、杂烩双肉锅、寡淡三鲜汤等；6 张配置表字段布局变化，全部重新解析）
+  - 专属天赋：天赋图鉴新增「⭐ 专属天赋」区分（按角色 PlayerSelectId 归属——打工仔/大学生/仓库管理员，退伍军人无），列表/详情标"👤 XX专属"，侧栏新增专属入口
+  - 天赋触发时间：24 个天赋自动标注触发时间标签（白天/夜间/危机阶段/停电时/探索时/生病时/灾难前/度过危机后）
+  - 只看未解锁：物品分类列表 + 天赋图鉴新增「只看未解锁」勾选框，只显示未解锁条目
+  - 图纸解锁：54 个配方（48 制作 + 6 烹饪）标「🔒 需图纸」，对应 36 个解锁天赋，配方卡片/详情/物品详情三处联动提示
+- **v1.5.5**（2026-08-27）
+  - 物品格子大小：全部物品显示背包占用格（宽×高），详情页「占用格子」升级为可视化格子图（大尺寸自动缩小防撑爆），列表 meta 新增"📦 宽×高"
 - **v1.5.4**（2026-08-27）
   - 家具交互时间：详情页「🔘 交互功能」每个按钮新增 ⏱️ 交互时间显示（数据来自动作配置表 During 字段，885 个家具带时长），智能格式化显示天/小时/分钟
   - 效果文本优化：原 fx 效果文本中混着的时长已移除，交互时间与效果数值分离显示，避免重复
@@ -59,7 +71,7 @@
 
 ## 数据来源与声明
 
-数据提取自游戏配置表（游戏版本 1.0.14911），页面不包含任何游戏美术资源。非官方资料站，仅供参考；数据如与游戏内不符，以游戏为准。
+数据提取自游戏配置表（游戏版本 1.0.15511），页面不包含任何游戏美术资源。非官方资料站，仅供参考；数据如与游戏内不符，以游戏为准。
 
 # 🏕️ Survival Log Wiki (Player-Made Game Database)
 
@@ -70,7 +82,7 @@ A single self-contained HTML file with zero dependencies, works fully offline. *
 
 ## Features
 
-- **Items**: 2,872 items browsable by category — five stat dimensions (Satiety / Morale / Energy / Health / Life), quality comparison (Perfect / Good / Normal / Fail), freshness & spoilage chains
+- **Items**: 2,877 items browsable by category — five stat dimensions (Satiety / Morale / Energy / Health / Life), quality comparison (Perfect / Good / Normal / Fail), freshness & spoilage chains
 - **Recipes**: 496 cooking recipes (incl. tag-combination recipes) + 148 crafting recipes, with facility & level lookups
 - **Furniture**: 1,249 furniture pieces — interaction buttons, electrical stats, cross-links between packages and placed furniture
 - **Buffs & Talents**: 758 buffs (incl. reverse lookup of spoiled-food debuffs) and 454 talents with per-level effects
@@ -85,10 +97,22 @@ A single self-contained HTML file with zero dependencies, works fully offline. *
 - **Recipe filter enhancement (v1.5.0)**: cooking recipe list gets a new "ingredient category" dropdown filter (12 categories: meat / vegetable / mushroom / staple / fruit / fish / egg-dairy / seasoning / soft drink / alcohol / snack / other), alongside level / facility / unlock filters
 - **Save file import (v1.5.1)**: the "✅ Unlocked" page gets an import button — select your game save file and it automatically detects and marks unlocked recipes (pattern-matching dynamic lookup, works across game updates); parsed locally only, never uploaded
 - **Furniture interaction duration (v1.5.4)**: each button in the furniture detail "🔘 Interaction" card now shows ⏱️ interaction time (sleep 6h, run 1h, manual power 10min, etc. — from the action config's During field, 885 furniture items have duration data); duration removed from effect text so time and stats are shown separately without duplication
+- **Exclusive talents & trigger times (v1.6.1)**: the talent codex now separates "⭐ exclusive talents" — talents unique to each character (Drifter / College Student / Warehouse Keeper each have their own lines, the Veteran has none), shown as "👤 XX exclusive" badges on lists and detail pages, with a dedicated sidebar entry; trigger times are auto-tagged from the talent descriptions (☀️ daytime / 🌙 night / ⚠️ crisis phase / 🌅 after crisis / 🌆 before disaster / ⚡ blackout / 🗺️ exploring / 🤒 sick)
+- **Show-unlocked-only filter (v1.6.1)**: both item category lists and the talent codex get a "只看未解锁" (unlocked only) checkbox — hide everything you already marked, show only what is still locked; talents can also be marked unlocked independently (synced with the "✅ Unlocked" page)
+- **Blueprint-locked recipes (v1.6.1)**: 54 recipes (48 crafting + 6 cooking) need the matching blueprint first (36 unlocking talents) — recipe cards/detail pages show a "🔒 需图纸 (blueprint needed)" gold badge, and item detail pages auto-reverse-lookup the hint, so you won't wonder why you can't craft despite the right level
+- **Item size cells (v1.5.5)**: every item now shows its backpack footprint (width × height); the detail-page "占用格子" card is a visualized grid (auto-shrinks for large sizes), and list meta adds "📦 W×H"
 - **Responsive**: the layout switches automatically between desktop and mobile browsers (drawer sidebar on phones, no app required)
 
 ## Changelog
 
+- **v1.6.1** (2026-09-03)
+  - Data update: game version 1.0.14911 → 1.0.15511, items 2,872 → 2,877 (5 new dishes: 老菇杂炖 / 杂烩双肉锅 / 寡淡三鲜汤, etc.; 6 config tables changed field layout and were fully re-parsed)
+  - Exclusive talents: the talent codex gains "⭐ exclusive talent" separation (assigned by the character's PlayerSelectId — Drifter / College Student / Warehouse Keeper, the Veteran has none), "👤 XX exclusive" badges on lists & details, and a new sidebar entry
+  - Talent trigger times: 24 talents are auto-tagged with trigger times (daytime / night / crisis phase / blackout / exploring / sick / before disaster / after crisis)
+  - Unlocked-only filter: both item category lists and the talent codex get a "只看未解锁" checkbox showing only locked entries
+  - Blueprint locks: 54 recipes (48 crafting + 6 cooking) are tagged "🔒 需图纸" with their unlocking talent, shown on recipe cards, detail pages and item details
+- **v1.5.5** (2026-08-27)
+  - Item size cells: every item now shows its backpack footprint (W×H); the detail "占用格子" card becomes a visualized grid (auto-shrinks so large sizes never break layout); list meta adds "📦 W×H"
 - **v1.5.4** (2026-08-27)
   - Furniture interaction duration: each button in the furniture detail "🔘 Interaction" card now shows ⏱️ interaction time (from the action config's During field, 885 furniture items have duration data), auto-formatted as days/hours/minutes
   - Effect text cleanup: duration removed from the fx effect text so interaction time and effect stats are shown separately without duplication
@@ -120,4 +144,4 @@ A single self-contained HTML file with zero dependencies, works fully offline. *
 
 ## Data Source & Disclaimer
 
-All data is extracted from the game's config tables (game version 1.0.14911). This page contains no game art assets. This is an unofficial fan project for reference only — when data differs from the game, the game is always right.
+All data is extracted from the game's config tables (game version 1.0.15511). This page contains no game art assets. This is an unofficial fan project for reference only — when data differs from the game, the game is always right.
