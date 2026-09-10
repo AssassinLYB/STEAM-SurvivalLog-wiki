@@ -1,68 +1,38 @@
-# 🏕️生存日志  Survival Log 物品百科（玩家自制资料站）
+# 🏕️生存日志 Survival Log 物品百科（玩家自制资料站）
 
-单个 HTML 文件、零依赖、无需联网——**下载 `生存日志图鉴.html` 双击即可使用。（请下载最新版本）**
+单个 HTML 文件、零依赖、无需联网——**下载 `生存日志图鉴.html` 双击即可使用。**
+
+> 🎯 **当前版本：v1.7.1**（2026-09-10）· 游戏配置已同步至 **1.0.15955** · 详见下方[版本记录](#版本记录)
 
 ## 功能
 
-- **物品图鉴**：2877 种物品按分类浏览，五维属性（饱食/心态/精力/健康/生命）、品质对比（完美/优良/普通/失败）、保鲜与变质链
-- **配方图鉴**：496 道烹饪配方（含标签组合菜谱）+ 148 条制作配方，设施/等级反查
-- **家具图鉴**：1249 件家具（功能按钮、电气参数、对应包裹物品互链）
-- **Buff / 天赋图鉴**：758 条 Buff（含过期惩罚反查）、454 个天赋逐级效果
-- **搜索**：支持拼音与首字母（如输入 `ftq` 搜"佛跳墙"）
-- **实用工具**：列表排序筛选、食材标签过滤、⭐收藏与属性对比表、深浅双主题、字体大小调节
-- **配方进度记录（v1.1.0）**：手动标记已解锁的配方——配方列表/详情页/物品列表行 🔒 均可一键标记；「✅ 已解锁」页按原本分类分组查看（烹饪按菜品子类、制作按产物类别），支持一键清空（带确认）
-- **物品解锁进度（v1.3.0）**：任意物品（食材/即食食物/菜品/材料…）都能标记"已解锁"——列表行 🔒/🔓 一键切换、详情页可标记，分类列表支持"已解锁在前"排序，「✅ 已解锁」页汇总查看（与配方标记相互独立）
-- **家具功能数值（v1.4.0）**：家具详情页直接看到功能按钮的真实数值——床的睡觉回复效率（铁床 ×1.1、实木床 ×1.25）、睡觉/打盹/睡美容觉的精力回复（每 30 分钟 + 全程估算）、跑步/发电的消耗与获得
-- **配方分区与专用设备警示（v1.4.1）**：物品详情页"用于配方"按 专属/通用 分区；果汁、奶昔、咖啡类菜谱标注"⚠️ 仅榨汁机/咖啡机"，避免放错灶台做不出菜
-- **配方计算器「我能做什么饭」（v1.5.0）**：勾选你已有的食材，自动列出所有能做的菜谱——专属菜谱需全部材料齐全，通用菜谱需每个类别至少一种；支持全选/清空，结果按专属/通用分区展示
-- **搜索增强（v1.5.0）**：搜索历史（最多10条，搜索框为空时自动显示，可单条删除）+ 最近浏览（最多20条，首页展示，访问物品/配方/家具/Buff/天赋详情页自动记录，可单条删除或清空）
-- **配方筛选增强（v1.5.0）**：烹饪配方列表新增「食材类别」下拉筛选（12个类别：肉/蔬菜/菌菇/主食/水果/鱼类/蛋奶/调味品/软饮料/酒/零食/其他），与等级/设施/解锁筛选并列
-- **存档导入（v1.5.1）**：「✅ 已解锁」页新增「📂 导入存档」按钮——选择游戏存档文件，自动识别并标记已解锁配方（模式匹配动态定位，不依赖固定偏移，游戏更新后仍可用）；仅在本地浏览器解析，不上传
-- **家具交互时间（v1.5.4）**：家具详情页「🔘 交互功能」每个按钮显示 ⏱️ 交互时间（睡觉6小时、跑步1小时、手动发电10分钟等，数据来自动作配置表）；原效果文本中的时长已移除，时间与数值分离显示更清晰
-- **专属天赋与触发时间（v1.6.1）**：天赋图鉴区分「⭐ 专属天赋」——每个角色独有的天赋（打工仔/大学生/仓库管理员各有专属系，退伍军人无），列表与详情标"👤 XX 专属"徽章，侧栏有专属入口；并按天赋描述自动标注触发时间（🌞白天/🌙夜间/⚠️危机阶段/🌅度过危机后/🌆灾难前/⚡停电时/🗺️探索时/🤒生病时）
-- **只看未解锁（v1.6.1）**：物品分类列表与天赋图鉴新增「只看未解锁」勾选框——排除已标记解锁的，只显示还没解锁的条目；天赋同样可独立标记解锁（与「✅ 已解锁」页联动）
-- **图纸解锁标记（v1.6.1）**：54 个配方（48 制作 + 6 烹饪）需先获得对应"图纸"（36 个解锁天赋）才能制作——配方卡片/详情页标「🔒 需图纸（XX天赋）」金徽章，物品详情自动反查提示，避免等级够了却做不出
-- **物品格子大小（v1.5.5）**：全部物品显示背包占用格（宽×高），详情页「占用格子」升级为可视化格子图（大尺寸自动缩小），列表 meta 新增"📦 宽×高"
-- **全端适配**：电脑和手机浏览器打开自动切换布局（手机端侧栏变为抽屉式，无需安装任何 App）
+- **物品图鉴**：2877 种物品，五维属性、品质对比（完美/优良/普通/失败）、保鲜与变质链
+- **配方图鉴**：493 道烹饪配方 + 148 条制作配方，设施/等级反查
+- **家具图鉴**：1249 件家具，功能按钮真实数值、电气参数、包裹互链
+- **Buff / 天赋图鉴**：759 条 Buff、454 个天赋逐级效果
+- **搜索**：拼音/首字母（`ftq`=佛跳墙）+ `re:` 正则 + `*`/`?` 通配符
+- **实用工具**：排序筛选、食材标签过滤、收藏与属性对比、深浅主题、字体调节、手机适配
+- **进度记录**：配方/物品/天赋「已解锁」标记（本机保存）、「✅ 已解锁」汇总页、存档导入
+- **配方计算器**：勾选已有食材列出可做菜谱，支持「只看未制作」+ 结果内筛选
+- **使用次数**：食材「被 N 道菜谱使用 / 可用×N 次」、成品「可吃×N 次」
+- **结局条件**：9 种结局一览 + 五路线总览 + 各结局前置事件提示 + 相关成就
+- **地图开启**：30 个地点解锁条件解码，按区域/开放状态筛选
 
 ## 版本记录
 
-- **v1.6.1**（2026-09-03）
-  - 数据更新：游戏版本 1.0.14911 → 1.0.15511，物品 2872 → 2877（新增 5 道菜：老菇杂炖、杂烩双肉锅、寡淡三鲜汤等；6 张配置表字段布局变化，全部重新解析）
-  - 专属天赋：天赋图鉴新增「⭐ 专属天赋」区分（按角色 PlayerSelectId 归属——打工仔/大学生/仓库管理员，退伍军人无），列表/详情标"👤 XX专属"，侧栏新增专属入口
-  - 天赋触发时间：24 个天赋自动标注触发时间标签（白天/夜间/危机阶段/停电时/探索时/生病时/灾难前/度过危机后）
-  - 只看未解锁：物品分类列表 + 天赋图鉴新增「只看未解锁」勾选框，只显示未解锁条目
-  - 图纸解锁：54 个配方（48 制作 + 6 烹饪）标「🔒 需图纸」，对应 36 个解锁天赋，配方卡片/详情/物品详情三处联动提示
-- **v1.5.5**（2026-08-27）
-  - 物品格子大小：全部物品显示背包占用格（宽×高），详情页「占用格子」升级为可视化格子图（大尺寸自动缩小防撑爆），列表 meta 新增"📦 宽×高"
-- **v1.5.4**（2026-08-27）
-  - 家具交互时间：详情页「🔘 交互功能」每个按钮新增 ⏱️ 交互时间显示（数据来自动作配置表 During 字段，885 个家具带时长），智能格式化显示天/小时/分钟
-  - 效果文本优化：原 fx 效果文本中混着的时长已移除，交互时间与效果数值分离显示，避免重复
-- **v1.5.3**（2026-08-26）
-  - 配方计算器「我能做什么饭」：勾选已有食材自动列出能做的菜谱（专属需全材料、通用需每类至少一种），支持全选/清空，结果按专属/通用分区
-  - 搜索增强：搜索历史（最多10条，搜索框为空时显示，可单条删除）+ 最近浏览（最多20条，首页展示，访问详情页自动记录）
-  - 配方筛选增强：烹饪配方列表新增「食材类别」下拉筛选（12个类别），与等级/设施/解锁筛选并列
-  - 存档导入：「✅ 已解锁」页新增导入按钮，选择存档文件自动识别并标记已解锁配方（模式匹配动态定位，游戏更新后仍可用），仅本地解析不上传
-  - 侧栏调整：「我能做什么饭」移到「✅ 已解锁」下面紧挨着；首页新增新功能提示行（可点击跳转）
-- **v1.4.1**（2026-08-26）
-  - 物品详情页"用于配方"分区：专属菜谱（指定食材）排在前面，通用菜谱（食材组合）排在后面，与配方列表页一致
-  - 专用设备警示：14 道果汁/奶昔/咖啡菜谱（西瓜汁、拿铁咖啡等）卡片与详情页标注"⚠️ 仅榨汁机/咖啡机可做"——放入燃气灶等普通灶台无法烹饪，只会得到黑暗料理
-  - 措辞修正：物品的"可加热"标签改为"可烹饪"（含义为可作为食材放入灶台烹饪）
-- **v1.4.0**（2026-08-25）
-  - 床的睡觉回复效率：床详情页新增回复效率系数（单人铁床 ×1.1、实木床 ×1.25，其余默认 ×1.0）
-  - 功能按钮真实数值：睡觉/打盹/睡美容觉/跑步/手动发电等原本只显示文案的功能，现在展示时长、每 30 分钟回复量、全程估算、消耗与获得（数据来自游戏动作/效果配置表）
-- **v1.3.0**（2026-08-25）
-  - 物品级解锁标记：所有物品（不只菜品）都能标记"已解锁"——食材、即食食物、材料等列表行都带 🔒/🔓，物品详情页也可标记
-  - 分类列表新增"解锁状态"排序：可按 已解锁在前 / 未解锁在前 排列
-  - 「✅ 已解锁」页新增"已解锁物品"分组（按原分类），一键清空同时清掉配方与物品
-- **v1.2.0**（2026-08-24）
-  - 配方列表分区：专属菜谱（指定食材）排在前面，通用菜谱（食材组合/自由组合）排在后面，两组各有小节标题
-  - 修正食材类别标签：物品详情"作为食材"的组合菜谱、食物列表"按食材类别过滤"现在按真正的食材类别（肉/蔬菜/菌菇/主食…）匹配
-- **v1.1.0**（2026-08-24）
-  - 新增「✅ 已解锁」页：手动标记已解锁配方，侧栏入口带实时计数；按原本分类分组展示；一键清空（带确认弹窗）
-  - 物品列表行新增 🔒/🔓 按钮：收藏星标旁一键标记"产出该物品的配方"为已解锁，无需点进详情页
-  - 解锁进度保存在你本地的浏览器中（localStorage），不同浏览器/设备之间不共享
-- **v1.0.0**：物品图鉴、配方图鉴、家具图鉴、Buff/天赋图鉴、拼音搜索、收藏与属性对比、深浅双主题、字体调节、手机端适配
+- **v1.7.1**（2026-09-10）新增结局条件页、地图开启页；首页横幅收敛为「已同步最新版本」；数据同步 1.0.15955
+- **v1.6.3**（2026-09-10）正则/通配符搜索 · 后退保留滚动 · 食材/成品使用次数 · 计算器「只看未制作」
+- **v1.6.2**（2026-09-10）数据同步 1.0.15511→1.0.15955（110 表重解析）；咖啡因 Buff、无人机、单曲循环等新内容；移除 3 道胡萝卜菜谱
+- **v1.6.1**（2026-09-03）数据更新 1.0.14911→1.0.15511；专属天赋、天赋触发时间、只看未解锁、图纸解锁
+- **v1.5.5**（2026-08-27）物品格子大小可视化
+- **v1.5.4**（2026-08-27）家具交互时间显示
+- **v1.5.3**（2026-08-26）配方计算器 · 搜索历史/最近浏览 · 食材类别筛选 · 存档导入
+- **v1.4.1**（2026-08-26）「用于配方」专属/通用分区 · 专用设备警示 · 可烹饪措辞
+- **v1.4.0**（2026-08-25）床睡眠回复效率 · 家具功能真实数值
+- **v1.3.0**（2026-08-25）物品级解锁标记 · 解锁状态排序 · 已解锁物品分组
+- **v1.2.0**（2026-08-24）配方列表分区 · 食材类别标签修正
+- **v1.1.0**（2026-08-24）「✅ 已解锁」页 · 列表行一键标记
+- **v1.0.0** 物品/配方/家具/Buff/天赋图鉴 · 拼音搜索 · 收藏对比 · 主题/字体 · 手机适配
 
 ## 地址
 
@@ -71,77 +41,51 @@
 
 ## 数据来源与声明
 
-数据提取自游戏配置表（游戏版本 1.0.15511），页面不包含任何游戏美术资源。非官方资料站，仅供参考；数据如与游戏内不符，以游戏为准。
+数据提取自游戏配置表（游戏版本 1.0.15955），页面不含任何游戏美术资源。非官方资料站，仅供参考；数据如与游戏内不符，以游戏为准。
+
+---
 
 # 🏕️ Survival Log Wiki (Player-Made Game Database)
 
-A single self-contained HTML file with zero dependencies, works fully offline. **Just download `生存日志图鉴.html` and open it in any browser.**
+A single self-contained HTML file with zero dependencies, fully offline. **Just download `生存日志图鉴.html` and open it.**
 
-- GitHub Pages：[Release v1 · AssassinLYB/STEAM-SurvivalLog-wiki](https://github.com/AssassinLYB/STEAM-SurvivalLog-wiki/releases/tag/V1)
-- bilibili：https://www.bilibili.com/video/BV1Gz8t6LEyP/
+> 🎯 **Latest version: v1.7.1** (2026-09-10) · game config synced to **1.0.15955** · see [Changelog](#changelog) below
 
 ## Features
 
-- **Items**: 2,877 items browsable by category — five stat dimensions (Satiety / Morale / Energy / Health / Life), quality comparison (Perfect / Good / Normal / Fail), freshness & spoilage chains
-- **Recipes**: 496 cooking recipes (incl. tag-combination recipes) + 148 crafting recipes, with facility & level lookups
-- **Furniture**: 1,249 furniture pieces — interaction buttons, electrical stats, cross-links between packages and placed furniture
-- **Buffs & Talents**: 758 buffs (incl. reverse lookup of spoiled-food debuffs) and 454 talents with per-level effects
-- **Search**: pinyin & initials supported (e.g. type `ftq` to find 佛跳墙, "Buddha Jumps Over the Wall")
-- **Utilities**: list sorting & filtering, ingredient-tag filters, ⭐ favorites with a stat-comparison table, light/dark themes, adjustable font size
-- **Recipe progress tracker (v1.1.0)**: mark recipes as unlocked — from recipe lists, detail pages, or the 🔒 button right on item rows; browse them grouped by original category on the "✅ Unlocked" page (cooking by dish sub-type, crafting by product category); clear all with a confirmation
-- **Item unlock progress (v1.3.0)**: mark any item (ingredients / ready-to-eat food / dishes / materials, …) as "unlocked" — one-click 🔒/🔓 on list rows and the detail page, "unlocked-first" sorting in category lists, and a summary on the "✅ Unlocked" page (independent from recipe marks)
-- **Furniture function values (v1.4.0)**: bed detail pages show sleep-recovery efficiency (iron bed ×1.1, solid-wood bed ×1.25) and real numbers for sleep / nap / beauty-sleep / running / power buttons — duration, stamina gained per 30 minutes, full-duration estimate, costs and gains
-- **Recipe sections & appliance warnings (v1.4.1)**: the item detail "used in recipes" list is now split into specific / generic sections; juice, milkshake and coffee recipes show a "⚠️ juicer/coffee maker only" warning so you don't put them on the wrong stove
-- **Recipe calculator "What can I cook?" (v1.5.0)**: check the ingredients you have and it automatically lists every recipe you can make — specific recipes need all ingredients, generic recipes need at least one per category; select all / clear all, results split by specific / generic
-- **Search enhancements (v1.5.0)**: search history (up to 10, shown when the search box is empty, deletable one by one) + recently viewed (up to 20, shown on the home page, auto-recorded when you visit any item/recipe/furniture/buff/talent detail page)
-- **Recipe filter enhancement (v1.5.0)**: cooking recipe list gets a new "ingredient category" dropdown filter (12 categories: meat / vegetable / mushroom / staple / fruit / fish / egg-dairy / seasoning / soft drink / alcohol / snack / other), alongside level / facility / unlock filters
-- **Save file import (v1.5.1)**: the "✅ Unlocked" page gets an import button — select your game save file and it automatically detects and marks unlocked recipes (pattern-matching dynamic lookup, works across game updates); parsed locally only, never uploaded
-- **Furniture interaction duration (v1.5.4)**: each button in the furniture detail "🔘 Interaction" card now shows ⏱️ interaction time (sleep 6h, run 1h, manual power 10min, etc. — from the action config's During field, 885 furniture items have duration data); duration removed from effect text so time and stats are shown separately without duplication
-- **Exclusive talents & trigger times (v1.6.1)**: the talent codex now separates "⭐ exclusive talents" — talents unique to each character (Drifter / College Student / Warehouse Keeper each have their own lines, the Veteran has none), shown as "👤 XX exclusive" badges on lists and detail pages, with a dedicated sidebar entry; trigger times are auto-tagged from the talent descriptions (☀️ daytime / 🌙 night / ⚠️ crisis phase / 🌅 after crisis / 🌆 before disaster / ⚡ blackout / 🗺️ exploring / 🤒 sick)
-- **Show-unlocked-only filter (v1.6.1)**: both item category lists and the talent codex get a "只看未解锁" (unlocked only) checkbox — hide everything you already marked, show only what is still locked; talents can also be marked unlocked independently (synced with the "✅ Unlocked" page)
-- **Blueprint-locked recipes (v1.6.1)**: 54 recipes (48 crafting + 6 cooking) need the matching blueprint first (36 unlocking talents) — recipe cards/detail pages show a "🔒 需图纸 (blueprint needed)" gold badge, and item detail pages auto-reverse-lookup the hint, so you won't wonder why you can't craft despite the right level
-- **Item size cells (v1.5.5)**: every item now shows its backpack footprint (width × height); the detail-page "占用格子" card is a visualized grid (auto-shrinks for large sizes), and list meta adds "📦 W×H"
-- **Responsive**: the layout switches automatically between desktop and mobile browsers (drawer sidebar on phones, no app required)
+- **Items**: 2,877 items — five stats, quality tiers (Perfect/Good/Normal/Fail), freshness & spoilage
+- **Recipes**: 493 cooking + 148 crafting recipes, facility & level lookups
+- **Furniture**: 1,249 pieces — real function values, electrical stats, package links
+- **Buffs & Talents**: 759 buffs, 454 talents with per-level effects
+- **Search**: pinyin/initials (`ftq` = 佛跳墙) + `re:` regex + `*`/`?` wildcards
+- **Utilities**: sorting/filtering, ingredient-tag filters, favorites & comparison, themes, font size, mobile
+- **Progress tracking**: mark recipes/items/talents unlocked (saved locally), "✅ Unlocked" page, save-file import
+- **Recipe calculator**: pick ingredients to list cookable recipes, with "not-yet-made only" + in-result filter
+- **Usage counts**: ingredients "used in N recipes / usable ×N times", dishes "eatable ×N times"
+- **Ending conditions**: all 9 endings, five-route overview, per-ending prerequisite hints, related achievements
+- **Map unlocks**: 30 map points with decoded unlock conditions, filter by area / open state
 
 ## Changelog
 
-- **v1.6.1** (2026-09-03)
-  - Data update: game version 1.0.14911 → 1.0.15511, items 2,872 → 2,877 (5 new dishes: 老菇杂炖 / 杂烩双肉锅 / 寡淡三鲜汤, etc.; 6 config tables changed field layout and were fully re-parsed)
-  - Exclusive talents: the talent codex gains "⭐ exclusive talent" separation (assigned by the character's PlayerSelectId — Drifter / College Student / Warehouse Keeper, the Veteran has none), "👤 XX exclusive" badges on lists & details, and a new sidebar entry
-  - Talent trigger times: 24 talents are auto-tagged with trigger times (daytime / night / crisis phase / blackout / exploring / sick / before disaster / after crisis)
-  - Unlocked-only filter: both item category lists and the talent codex get a "只看未解锁" checkbox showing only locked entries
-  - Blueprint locks: 54 recipes (48 crafting + 6 cooking) are tagged "🔒 需图纸" with their unlocking talent, shown on recipe cards, detail pages and item details
-- **v1.5.5** (2026-08-27)
-  - Item size cells: every item now shows its backpack footprint (W×H); the detail "占用格子" card becomes a visualized grid (auto-shrinks so large sizes never break layout); list meta adds "📦 W×H"
-- **v1.5.4** (2026-08-27)
-  - Furniture interaction duration: each button in the furniture detail "🔘 Interaction" card now shows ⏱️ interaction time (from the action config's During field, 885 furniture items have duration data), auto-formatted as days/hours/minutes
-  - Effect text cleanup: duration removed from the fx effect text so interaction time and effect stats are shown separately without duplication
-- **v1.5.3** (2026-08-26)
-  - Recipe calculator "What can I cook?": check the ingredients you have and it lists every recipe you can make (specific needs all ingredients, generic needs at least one per category); select all / clear all, results split by specific / generic
-  - Search enhancements: search history (up to 10, shown when empty, deletable one by one) + recently viewed (up to 20, on the home page, auto-recorded on detail page visits)
-  - Recipe filter enhancement: new "ingredient category" dropdown (12 categories) alongside level / facility / unlock filters
-  - Save file import: "✅ Unlocked" page gets an import button — select a save file to auto-detect and mark unlocked recipes (pattern-matching dynamic lookup, works across updates); parsed locally only
-  - Sidebar tweak: "What can I cook?" moved right below "✅ Unlocked"; home page gets a new-feature highlight row (clickable links)
-- **v1.4.1** (2026-08-26)
-  - Item detail "used in recipes" sections: specific recipes (fixed ingredients) come first, generic recipes (ingredient combinations) after — consistent with the recipe list page
-  - Appliance warnings: the 14 juice / milkshake / coffee recipes (watermelon juice, latte, …) are marked "⚠️ juicer/coffee maker only" on cards and detail pages — on a normal stove (gas stove, fuel stove, …) they cannot be cooked and only produce the dark dish
-  - Wording fix: the item badge "可加热" (reheatable) is now "可烹饪" (cookable — can be placed in a stove as an ingredient)
-- **v1.4.0** (2026-08-25)
-  - Bed sleep-recovery efficiency: bed detail pages now show the recovery coefficient (iron bed ×1.1, solid-wood bed ×1.25, others default ×1.0)
-  - Real numbers for furniture functions: sleep / nap / beauty-sleep / running / power buttons that previously showed only text now display duration, stamina gained per 30 minutes, a full-duration estimate, and costs & gains (decoded from the game's action/effect config tables)
-- **v1.3.0** (2026-08-25)
-  - Item-level unlock flag: every item (not just dishes) can now be marked "unlocked" — raw ingredients, ready-to-eat food, materials, etc. all show a 🔒/🔓 toggle on list rows, and the item detail page has one too
-  - Category lists: new "unlock status" sort — order by unlocked-first / locked-first
-  - "✅ Unlocked" page: new "unlocked items" section (grouped by category); clear-all now clears both recipes and items
-- **v1.2.0** (2026-08-24)
-  - Recipe list sections: specific recipes (fixed ingredients) come first, generic recipes (ingredient combinations / free combination) after, each with its own heading
-  - Fixed ingredient-category tags: the item detail "used in recipes" combo list and the food-list category filter now match by the real ingredient category (meat / vegetable / mushroom / staple, …), so the related generic recipes are correct
-- **v1.1.0** (2026-08-24)
-  - New "✅ Unlocked" page: manually track unlocked recipes — sidebar entry with live count, grouped by original category, clear-all with confirmation
-  - Item lists: new 🔒/🔓 button next to the favorite star marks the recipes that produce that item in one click, no need to open the detail page
-  - Unlock progress is stored in your local browser (localStorage) and is not shared across browsers or devices
-- **v1.0.0**: item codex, recipe codex, furniture codex, buff/talent codex, pinyin search, favorites & stat comparison, light/dark themes, font-size control, mobile support
+- **v1.7.1** (2026-09-10) new Ending-conditions page & Map-unlock page; home banner condensed to "synced to latest version"; data synced to 1.0.15955
+- **v1.6.3** (2026-09-10) regex/wildcard search · back preserves scroll · ingredient/dish usage counts · calculator "not-yet-made only"
+- **v1.6.2** (2026-09-10) data sync 1.0.15511→1.0.15955 (all 110 tables re-parsed); Caffeine buff, drone, single-loop & more; 3 carrot recipes removed
+- **v1.6.1** (2026-09-03) data update 1.0.14911→1.0.15511; exclusive talents, trigger times, unlocked-only filter, blueprint locks
+- **v1.5.5** (2026-08-27) item size cells visualization
+- **v1.5.4** (2026-08-27) furniture interaction duration
+- **v1.5.3** (2026-08-26) recipe calculator · search history/recent · ingredient-category filter · save import
+- **v1.4.1** (2026-08-26) "used in recipes" sections · appliance warnings · wording fix
+- **v1.4.0** (2026-08-25) bed sleep-recovery efficiency · real furniture function values
+- **v1.3.0** (2026-08-25) item-level unlock flag · unlock-status sort · unlocked-items section
+- **v1.2.0** (2026-08-24) recipe list sections · ingredient-category tag fixes
+- **v1.1.0** (2026-08-24) "✅ Unlocked" page · one-click marking on list rows
+- **v1.0.0** item/recipe/furniture/buff/talent codexes · pinyin search · favorites & comparison · themes/font/mobile
+
+## Links
+
+- GitHub Pages: [Release v1 · AssassinLYB/STEAM-SurvivalLog-wiki](https://github.com/AssassinLYB/STEAM-SurvivalLog-wiki/releases/tag/V1)
+- bilibili: https://www.bilibili.com/video/BV1Gz8t6LEyP/
 
 ## Data Source & Disclaimer
 
-All data is extracted from the game's config tables (game version 1.0.15511). This page contains no game art assets. This is an unofficial fan project for reference only — when data differs from the game, the game is always right.
+All data is extracted from the game's config tables (game version 1.0.15955). This page contains no game art assets. This is an unofficial fan project for reference only — when data differs from the game, the game is always right.
